@@ -12,12 +12,12 @@ class BookController extends Controller
 
         $books = Book::all(); // metodo statico per richiamare tutti i libri presenti in tabella 
 
-        return view('books.index', compact('books')); // compact('books') uguale a ['books'=>$books]
+        return view('book.index', compact('books')); // compact('books') uguale a ['books'=>$books]
     }
 
     public function bookCreate () {
 
-        return view('books.create');
+        return view('book.create');
     }
 
     public function bookStore (BookRequest $request) { // BookRequest injection
@@ -81,6 +81,6 @@ class BookController extends Controller
             abort(404);
         } */
 
-        return view('books.show', ['book'=>$book]);
+        return view('book.show', ['book'=>$book]);
     }
 }
