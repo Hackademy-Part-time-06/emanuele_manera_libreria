@@ -1,0 +1,1 @@
+<!-- Visualizzare dettagli singolo libro -->
